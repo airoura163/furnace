@@ -76,7 +76,7 @@ def drawPicture(data):
     ts = time.time()
     dt = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime(ts))
     # replace . with _
-    prefix = '_'.join(a.split('.'))
+    prefix = '_'.join(HOST.split('.'))
     file_name = f'images/{prefix}_gpu_status_{dt}.jpg'
     # 将饼图保存到本地，格式为jpg格式，每英寸点数分辨率设置为200
     fig.savefig(file_name, dpi=200)
@@ -94,7 +94,7 @@ def send_dingding_message(webhook, content, img_url):
     data = {
          "msgtype": "markdown",
          "markdown": {
-             "title": f"{IP} GPU 使用情况",
+             "title": f"{HOST} GPU 使用情况",
              "text": f"{content} \n\n ![screenshot]({img_url})"
          }
     }
