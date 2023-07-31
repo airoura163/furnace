@@ -1,0 +1,13 @@
+HOST : x.x.x.x
+INTERVAL : 600
+WEBHOOK_URL : 
+    DINGDING: https://oapi.dingtalk.com/robot/send?access_token=
+CUDA_VISIBLE_DEVICES : -1
+
+# Qiniu
+USE_QINIU:
+    STATUS: True
+    ACCESS_KEY : xxxxxxxxxxxxxxxxxxxxxx
+    SECRET_KEY : xxxxxxxxxxxxxxxxxxxxxx
+    EXTERNAL_DOMAIN : http://xxxxxxxxx.bkt.clouddn.com/
+    BUCKET_NAME : xxxxxxxxx
